@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class GatewayApplication {
+
+    // Spring Boot entry point
     
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);

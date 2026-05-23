@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GatewayResource {
+
+    // Minimal REST controller
+
+    // Exposes a root health-check endpoint
     
     @GetMapping("/")
     public ResponseEntity<String> hello() {

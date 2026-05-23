@@ -13,6 +13,7 @@ spring:
                 allowedOrigins: ${CORS_ALLOWED_ORIGINS:*}
                 allowedHeaders: "*"
                 allowedMethods: "*"
+                allowCredentials: ${CORS_ALLOWED_CREDENTIALS}
 
           routes:
 
@@ -25,3 +26,14 @@ spring:
               uri: http://account:8080
               predicates:
                 - Path=/accounts/**
+
+            - id: auth
+              uri: http://auth:8080
+              predicates:
+                - Path=/auth/**
+
+logging:
+  level:
+    root: info
+    store: debug
+    org.springframework.web: debug
